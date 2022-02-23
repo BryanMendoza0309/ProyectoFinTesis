@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\User;
+use App\ModelRoles\Roles;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +15,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    if(User::get()->isEmpty()){
+        Roles::create([
+            'nombre'=>'Super Administrador',
+            'slug'=>'super_administrador',
+            'descripcion'=>'Tiene acceso a todo',
+            'fullacceso'=>'yes'
+            ]); 
+            $rolid = Roles::where('slug','super_administrador')->firstOrFail();
+    $usuarioMaster = new User();
+    $usuarioMaster->name='ADMINRC5';
+    $usuarioMaster->email='ADMINRC5@hotmail.com';
+    $usuarioMaster->password=Hash::make('ADMINRC52022');
+    $usuarioMaster->email_verified_at = now();
+    $usuarioMaster->save();
+    $usuario =  User::first();
+    $usuario->roles()->sync([$rolid->id]);
+    }
+    return view('auth/login');
 });
 
-Auth::routes();
+Auth::routes(["register" => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
