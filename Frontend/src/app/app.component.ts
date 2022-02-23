@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { InicioPage } from './inicio/inicio.page';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  
   public appPages = [
     {
       title: 'Inicio',
@@ -20,8 +22,53 @@ export class AppComponent {
           icon: 'home'
         },
         {
+          title: 'Buró Nacional',
+          url: 'buro-nacional',
+          icon: 'home'
+        },
+        {
+          title: 'Régimen Orgánico',
+          url: 'regimen-organico',
+          icon: 'home'
+        },
+        {
           title: 'Sedes',
-          url: 'folder/Outbox',
+          url: 'sedes',
+          icon: 'home'
+        },
+        {
+          title: 'Nuestras Causas',
+          url: 'nuestras-causas',
+          icon: 'home'
+        },
+        {
+          title: 'Ideario',
+          url: 'ideario',
+          icon: 'home'
+        }
+      ]
+    },
+    {
+      title: 'AUTORIDADES ELECTAS',
+      children:[
+        {
+          title: 'Bancada de UNES',
+          url: 'bancada-unes',
+          icon: 'home'
+        },
+        {
+          title: 'Prefecturas',
+          url: 'prefecturas',
+          icon: 'home'
+        },
+        {
+          title: 'Consejales',
+          url: 'concejales',
+          icon: 'home'
+        },
+        {
+          title: 'Juntas Parroquiales',
+          url: 'juntas-parroquiales',
           icon: 'home'
         }
       ]
