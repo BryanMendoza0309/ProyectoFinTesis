@@ -8,7 +8,7 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Inicio',
-      url: 'folder/inbox',
+      url: 'inicio',
       icon: 'home'
     },
     {
@@ -16,12 +16,12 @@ export class AppComponent {
       children:[
         {
           title: 'Rafael Correa',
-          url: 'folder/inbox',
+          url: 'rafael-correa',
           icon: 'home'
         },
         {
           title: 'Sedes',
-          url: 'folder/inbox',
+          url: 'folder/Outbox',
           icon: 'home'
         }
       ]
