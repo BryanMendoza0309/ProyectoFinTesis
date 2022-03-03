@@ -13,4 +13,8 @@ export class InicioPage implements OnInit {
   ngOnInit() {
   }
 
+  slidesOptions = {
+    slidesPerView: 1.5
+  }
+
 }
