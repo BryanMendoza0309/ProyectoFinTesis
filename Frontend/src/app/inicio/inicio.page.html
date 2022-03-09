@@ -9,17 +9,33 @@
 
 <ion-content >
   <div class="gallery">
-    <ion-img src="../../assets/imgs/back_02_home_rc.jpg"></ion-img>
+    <ion-img src="../../assets/imgs/back_02_home_rc.jpg" ></ion-img>
     <ion-img src="../../assets/imgs/logo_rc_200px.png" id="stilo"></ion-img>
     <ion-img src="../../assets/imgs/papaitocorrea.png" id="stilo2" > </ion-img>
     <!--ion-img src="../../assets/imgs/adespertar.png"></ion-img-->
     <p id="stilo3">"Sabías que estábamos mejor"</p>
   </div>
 
-  <ion-content>
+  <div>
 
     <div class="slides ion-margin-bottom">
       <ion-slides [options]="slidesOptions">
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <!--div class="main">
+                <img src="../../assets/imgs/logo_rc_200px.png">
+              </!div-->
+              <img class="files" src="../../assets/imgs/icono_a_home_rc.png">
+            </ion-card-header>
+            <!--ion-card-content class="ion-text-left">
+              <ion-card-title class="ion-margin-bottom"></ion-card-title>
+              <ion-card-subtitle class="ion-text-right"></ion-card-subtitle>
+              <ion-progress-bar value="0.5" color="custom"></ion-progress-bar>
+            </!ion-card-content-->
+          </ion-card>
+        </ion-slide>
+
         <ion-slide>
           <ion-card>
             <ion-card-header>
@@ -86,22 +102,11 @@
   
       </ion-slides>
     </div>
-  
-    <div class="container">
-  
-      <h2>...</h2>
-  
-      <ion-item lines="none">
-        
-      </ion-item>
-  
-          <ion-item lines="none">
-       
-      </ion-item>
-  
-    </div>
-  
-  </ion-content>
-    
+  </div>
 
-  </ion-content>
+  <div>
+    <div class="gallery2">
+      <ion-img src="../../assets/imgs/logo_rc_200px.png"></ion-img>
+    </div>
+  </div>
+</ion-content>
